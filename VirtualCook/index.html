@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtualCook</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand" href="#">
+            <h5 class="fs-3 mb-0">Virtual<span class="fs-3">Cook</span></h5>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#feedback">Feedback</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="">
+        <img src="img/searchbar-image.png" alt="" class="" />
+      </div>
+      <div class="search-container" id="searchContainer">
+        <div class="search-wrapper" id="searchWrapper">
+          <div class="input-group">
+            <input
+              id="searchInput"
+              type="text"
+              class="form-control search-input"
+              placeholder="What would you like to cook today?"
+              aria-label="Search recipes"
+            />
+            <button class="btn search-btn" id="searchBtn" type="button">
+              🔍
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipes container -->
+      <div class="container mt-5" id="recipesContainer"></div>
+    </main>
+
+    <script src="js/bootstrap.js"></script>
+    <script>
+      let Recipes = [];
+
+      // Load recipes from JSON file
+      fetch("recipes.json")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); // now you can use your recipes array
+          Recipes = data; // store recipes in a variable for later use
+        })
+        .catch((error) => console.error("Error loading JSON:", error));
+
+      const searchInput = document.getElementById("searchInput");
+      const searchWrapper = document.getElementById("searchWrapper");
+      const searchContainer = document.getElementById("searchContainer");
+      const recipesContainer = document.getElementById("recipesContainer");
+
+      // Add some interactivity
+      searchInput.addEventListener("focus", function () {
+        searchWrapper.style.transform = "translateY(-5px)";
+      });
+      searchInput.addEventListener("blur", function () {
+        searchWrapper.style.transform = "translateY(0)";
+      });
+
+      function searchRecipes() {
+        const query = searchInput.value.toLowerCase().trim();
+        recipesContainer.innerHTML = ""; // clear old results
+
+        // filter results based on title or ingredients
+        const results = Recipes.filter(
+          (recipe) =>
+            recipe.Title.toLowerCase().includes(query) ||
+            recipe.Ingredients.some((ing) => ing.toLowerCase().includes(query))
+        );
+
+        // Hide the search bar when recipes are displayed
+        if (results.length > 0) {
+          searchContainer.style.display = "none"; // hide the search bar
+
+          results.forEach((recipe) => {
+            const recipeCard = document.createElement("div");
+            recipeCard.className = "card mb-3 p-3 shadow-sm";
+            recipeCard.innerHTML = `
+              <img src="${
+                recipe.ImageURL || "img/placeholder.png"
+              }" class="card-img-top" alt="${recipe.Title}">
+              <h4 class="fw-bold mt-2">${recipe.Title}</h4>
+              <p>${recipe.Description}</p>
+              <h6>Ingredients:</h6>
+              <ul>
+                ${recipe.Ingredients.map((i) => `<li>${i}</li>`).join("")}
+              </ul>
+              <h6>Steps:</h6>
+              <ol>
+                ${recipe.Steps.map((s) => `<li>${s}</li>`).join("")}
+              </ol>
+          `;
+            recipesContainer.appendChild(recipeCard);
+          });
+        } else {
+          // searchContainer.style.display = "block";
+          // alert(`No recipes found for "${query}"`);
+          recipesContainer.innerHTML = `
+          <div class="alert alert-warning" role="alert">
+              No recipes found for "<strong>${query}</strong>"
+            </div>
+            `;
+        }
+      }
+
+      // Hook up events
+      document
+        .getElementById("searchBtn")
+        .addEventListener("click", searchRecipes);
+      searchInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          searchRecipes();
+        }
+      });
+    </script>
+  </body>
 </html>
