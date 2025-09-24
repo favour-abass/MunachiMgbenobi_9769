@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "image": ["https://1.bp.blogspot.com/-r0OMJRFhyGM/W3H4lpF7aAI/AAAAAAAAAVw/mVcdqCbbsMwy_lo3sx10DdjV9DfME1N6ACLcBGAs/s1600/1-_6Q-7J70koMeNkm4_3nt1A.jpeg"],
     "Title": "Jollof Rice",
     "Description": "The best Jollof recipe",
     "Ingredients": [
@@ -18,14 +19,404 @@
       "2 Tablespoons of ginger paste"
     ],
     "Steps": [
-      "Season the chicken/beef with a teaspoon of salt, one seasoning cube, half 2 teaspoons of curry and 1 teaspoon of thyme, half a cup of sliced onions then let it sit for some minutes. For chicken, set on heat and let it boil for 10-15 minutes, beef would take around 20-30 minutes.",
-      "Set aside the meat and the stock in fresh bowls. Peel off the outer back of the ginger/garlic, then pound or grind whichever you prefer.",
-      "Wash your rice with hot water and salt first, then room temperature water till the water runs clear",
-      "Take the meat which must've cooled down and deep fry, set aside after frying.",
-      "Once you are done with frying the meat, reduce the oil to 250ml (1 cup), add the remaining one cup of sliced onions, carmelise for 1-2 minutes, then add the pepper mix. Using the same oil you used in frying the meat add flavor to the jollof rice.",
-      "Frying the pepper mix would take about 20 minutes. Fry until when you lift a portion with your frying spoon, you will notice the oil continues to boil in the spoon. You also notice the tomatoes turning dark. It should begin to look like stew at this point.",
-      "Once the pepper mix is well fried, add the meat stock (chicken/beef stock) to the fried pepper mix in the pot, the ground ginger/garlic, 3 tablesoons of curry and a tablespoon of thyme, salt to taste, and 3 cups of water. Add another seasoning cube. Stir and taste, it should taste overly spiced. Don't worry, once the rice is added the taste would balance.",
-      "Add the rice. Then cover and allow the rice to cook on low heat for 30-45 minutes. Remember that you can add water occasionally if the water isn't enough."
+      "Season and boil the chicken or beef with spices and onions until cooked.",
+      "Set aside the meat and stock; prepare ginger and garlic.",
+      "Wash the rice thoroughly.",
+      "Deep fry the cooked meat and set aside.",
+      "Reduce oil, caramelize onions, and fry the pepper mix in the same oil.",
+      "Fry the pepper mix until it thickens and darkens.",
+      "Add meat stock, ginger, garlic, more spices, and water to the fried pepper mix; taste and adjust seasoning.",
+      "Add the washed rice, cover, and cook on low heat until done, adding water as needed."
+    ]
+  },
+  {
+    "id": 2,
+    "image": ["https://bing.com/th?id=OSK.35062c85a85405d3846307d47b793ee7"],
+    "Title": "Egusi Soup",
+    "Description": "A rich Nigerian melon seed soup.",
+    "Ingredients": [
+      "2 cups ground egusi (melon seeds)",
+      "1kg assorted meats",
+      "2 cups spinach or bitterleaf",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 cup stock fish",
+      "1 cup dry fish",
+      "1 onion, chopped"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add stock fish and dry fish, cook for 10 minutes.",
+      "Heat palm oil, add ground egusi and fry for 5 minutes.",
+      "Add meat stock, crayfish, and simmer for 10 minutes.",
+      "Add meats, fish, and vegetables. Simmer for 5 minutes."
+    ]
+  },
+  {
+    "id": 3,
+    "image": ["https://lowcarbafrica.com/wp-content/uploads/2019/08/Efo-Riro-IG-2.jpg"],
+    "Title": "Efo Riro",
+    "Description": "A delicious Yoruba spinach stew.",
+    "Ingredients": [
+      "2 bunches spinach",
+      "1kg assorted meats",
+      "1 cup palm oil",
+      "2 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1 onion",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste"
+    ],
+    "Steps": [
+      "Blend peppers and onions, fry in palm oil.",
+      "Add meats and crayfish, cook for 10 minutes.",
+      "Add spinach, seasoning, and simmer for 5 minutes."
+    ]
+  },
+  {
+    "id": 4,
+    "image": ["https://tse2.mm.bing.net/th/id/OIP.TWlp3PyCe9W_sEFXdLMqTQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Ofada Stew",
+    "Description": "Spicy green pepper stew for Ofada rice.",
+    "Ingredients": [
+      "10 green bell peppers",
+      "2 scotch bonnet peppers",
+      "1kg assorted meats",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 onion"
+    ],
+    "Steps": [
+      "Blend peppers and onions, fry in bleached palm oil.",
+      "Add meats and crayfish, cook for 15 minutes.",
+      "Simmer and serve with Ofada rice."
+    ]
+  },
+  {
+    "id": 5,
+    "image": ["https://th.bing.com/th/id/R.caf3aebac826eb00b07d39395f7918d5?rik=q9w7KU29Rn03lw&riu=http%3a%2f%2fsisijemimah.com%2fwp-content%2fuploads%2f2015%2f07%2fogbono-2.jpg&ehk=JLxwKq08Ik4YGa%2fUOUOoUwSRgsAqAvPAIKh2Wzpc8cs%3d&risl=&pid=ImgRaw&r=0"],
+    "Title": "Ogbono Soup",
+    "Description": "Draw soup made from ogbono seeds.",
+    "Ingredients": [
+      "1 cup ground ogbono seeds",
+      "1kg assorted meats",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 cup stock fish",
+      "1 cup dry fish",
+      "2 cups pumpkin leaves"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add stock fish and dry fish, cook for 10 minutes.",
+      "Heat palm oil, add ogbono and fry for 5 minutes.",
+      "Add meat stock, crayfish, and simmer for 10 minutes.",
+      "Add meats, fish, and vegetables. Simmer for 5 minutes."
+    ]
+  },
+  {
+    "id": 6,
+    "image": ["https://th.bing.com/th/id/R.1b16451c2237a0ec19623cdf4ad99b91?rik=xiS3VwYyQ1J2yA&pid=ImgRaw&r=0"],
+    "Title": "Afang Soup",
+    "Description": "A nutritious soup from the Efik/Ibibio people.",
+    "Ingredients": [
+      "2 cups afang leaves",
+      "2 cups waterleaf",
+      "1kg assorted meats",
+      "1 cup periwinkle",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add periwinkle, cook for 5 minutes.",
+      "Add palm oil, crayfish, and vegetables. Simmer for 10 minutes."
+    ]
+  },
+  {
+    "id": 7,
+    "image": ["https://tse2.mm.bing.net/th/id/OIP.HvDVxuwTLnGF5ch7ozLgZwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Edika Ikong",
+    "Description": "A rich vegetable soup from Cross River.",
+    "Ingredients": [
+      "2 cups pumpkin leaves",
+      "2 cups waterleaf",
+      "1kg assorted meats",
+      "1 cup periwinkle",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add periwinkle, cook for 5 minutes.",
+      "Add palm oil, crayfish, and vegetables. Simmer for 10 minutes."
+    ]
+  },
+  {
+    "id": 8,
+    "image": ["https://1.bp.blogspot.com/-SmzQGckBPRk/VvRplV-765I/AAAAAAAATC0/zi7DPbvA72MghVNn-bcO1MRY3EZabpw9A/s1600/nkwobi%2Brecipe%2Bby%2Bsisiyemmie%2Bblog%2B.JPG"],
+    "Title": "Nkwobi",
+    "Description": "Cow foot dish in spicy palm oil sauce.",
+    "Ingredients": [
+      "1kg cow foot",
+      "1 cup palm oil",
+      "2 tablespoons potash (kaun)",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 onion",
+      "Sliced utazi leaves"
+    ],
+    "Steps": [
+      "Boil cow foot with seasoning and onions until tender.",
+      "Mix potash with palm oil until thickened.",
+      "Add cow foot, crayfish, and utazi. Mix and serve."
+    ]
+  },
+  {
+    "id": 9,
+    "image": ["https://th.bing.com/th/id/R.760ad72f46438b28af1430cc718f433e?rik=dkACC9f2IyT0lw&riu=http%3a%2f%2fsisijemimah.com%2fwp-content%2fuploads%2f2016%2f11%2fAssorted-Meat-Pepper-Soup-3.jpg&ehk=BRXR2fpQYYrOVnuG2533ctn%2bvEgQEkFINLWiRjRdYts%3d&risl=&pid=ImgRaw&r=0"],
+    "Title": "Pepper Soup",
+    "Description": "Spicy broth with assorted meats or fish.",
+    "Ingredients": [
+      "1kg assorted meats or fish",
+      "2 tablespoons pepper soup spice",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 onion",
+      "Scent leaves"
+    ],
+    "Steps": [
+      "Boil meats or fish with seasoning and onions until tender.",
+      "Add pepper soup spice and scent leaves. Simmer for 10 minutes."
+    ]
+  },
+  {
+    "id": 10,
+    "image": ["https://tse2.mm.bing.net/th/id/OIP.o-LMYh4kUynGWIkMs7A2rQHaEW?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Moi Moi",
+    "Description": "Steamed bean pudding.",
+    "Ingredients": [
+      "2 cups peeled beans",
+      "2 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1 onion",
+      "1/4 cup vegetable oil",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "Boiled eggs (optional)"
+    ],
+    "Steps": [
+      "Blend beans, peppers, and onions until smooth.",
+      "Mix in oil, seasoning, and salt.",
+      "Pour into containers, add eggs, and steam for 45 minutes."
+    ]
+  },
+  {
+    "id": 11,
+    "image": ["https://tse1.mm.bing.net/th/id/OIP.yZFuA-tbSSdN_i8qH6PHbgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Akara",
+    "Description": "Fried bean cakes.",
+    "Ingredients": [
+      "2 cups peeled beans",
+      "2 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1 onion",
+      "Salt to taste",
+      "Vegetable oil for frying"
+    ],
+    "Steps": [
+      "Blend beans, peppers, and onions until smooth.",
+      "Scoop batter into hot oil and fry until golden brown."
+    ]
+  },
+  {
+    "id": 12,
+    "image": ["https://tse1.mm.bing.net/th/id/OIP.nQ8LiJIstJ6tNirLpyZfkwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Ewa Agoyin",
+    "Description": "Mashed beans with spicy sauce.",
+    "Ingredients": [
+      "2 cups beans",
+      "1 cup palm oil",
+      "2 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1 onion",
+      "Salt to taste"
+    ],
+    "Steps": [
+      "Boil beans until soft and mash.",
+      "Blend peppers and onions, fry in palm oil until dark.",
+      "Serve sauce over mashed beans."
+    ]
+  },
+  {
+    "id": 13,
+    "image": ["https://tse1.mm.bing.net/th/id/OIP.n-C_CoGmlthtboqUR4Qj8QHaFI?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Ofe Nsala (White Soup)",
+    "Description": "A light, spicy, and delicious white soup popular in Eastern Nigeria.",
+    "Ingredients": [
+      "1kg catfish or chicken",
+      "1 cup yam (pounded or yam flour)",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "1 tablespoon uziza seeds (optional)",
+      "1 tablespoon ground pepper",
+      "Salt to taste",
+      "Scent leaves or utazi leaves"
+    ],
+    "Steps": [
+      "Boil the catfish or chicken with seasoning and pepper until cooked.",
+      "Add ground crayfish and uziza seeds, cook for 5 minutes.",
+      "Add pounded yam or yam flour to thicken the soup.",
+      "Add scent leaves or utazi leaves, simmer for 3 minutes and serve hot."
+    ]
+  },
+  {
+    "id": 14,
+    "image": ["https://tse2.mm.bing.net/th/id/OIP.f5FzeD9OViCTUjyazwI-MgHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Banga Soup",
+    "Description": "Palm nut soup from the Niger Delta.",
+    "Ingredients": [
+      "2 cups palm nut extract",
+      "1kg assorted meats",
+      "1 cup dry fish",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "Banga spices"
+    ],
+    "Steps": [
+      "Boil meats with seasoning until tender.",
+      "Add palm nut extract, dry fish, crayfish, and spices. Simmer for 20 minutes."
+    ]
+  },
+  {
+    "id": 15,
+    "image": ["https://tse4.mm.bing.net/th/id/OIP.d4iLr3vekxSeXh2Z1vs02AHaFw?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Oha Soup",
+    "Description": "Traditional soup made with Oha leaves.",
+    "Ingredients": [
+      "2 cups Oha leaves",
+      "1kg assorted meats",
+      "1 cup cocoyam paste",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 cup stock fish"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add stock fish, cocoyam paste, and palm oil. Simmer for 10 minutes.",
+      "Add Oha leaves and crayfish. Simmer for 5 minutes."
+    ]
+  },
+  {
+    "id": 16,
+    "image": ["https://tse4.mm.bing.net/th/id/OIP.pp6SQXRTgtmYjV9y63gD3AHaLG?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Okra Soup",
+    "Description": "Slimy soup made with okra and vegetables.",
+    "Ingredients": [
+      "2 cups chopped okra",
+      "1kg assorted meats",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "1 cup stock fish",
+      "2 cups ugu leaves"
+    ],
+    "Steps": [
+      "Boil meats with seasoning and onions until tender.",
+      "Add stock fish, palm oil, and crayfish. Simmer for 10 minutes.",
+      "Add okra and vegetables. Simmer for 5 minutes."
+    ]
+  },
+  {
+    "id": 17,
+    "image": ["https://cdn.businessday.ng/wp-content/uploads/2024/04/Untitled-design-53-1.png"],
+    "Title": "Fisherman Soup",
+    "Description": "Seafood soup from the riverine areas.",
+    "Ingredients": [
+      "1kg fresh fish",
+      "1 cup periwinkle",
+      "1 cup shrimps",
+      "1 cup palm oil",
+      "2 tablespoons ground crayfish",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "Scent leaves"
+    ],
+    "Steps": [
+      "Boil fish and seafood with seasoning until cooked.",
+      "Add palm oil, crayfish, and scent leaves. Simmer for 10 minutes."
+    ]
+  },
+  {
+    "id": 18,
+    "image": ["https://tse4.mm.bing.net/th/id/OIP.oWX7AAuvy8MdIcSdB8yNNAHaHk?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Yam Porridge",
+    "Description": "Yam cooked in spicy tomato sauce.",
+    "Ingredients": [
+      "1 medium yam tuber",
+      "2 red bell peppers",
+      "2 scotch bonnet peppers",
+      "1 onion",
+      "1/4 cup palm oil",
+      "2 seasoning cubes",
+      "Salt to taste",
+      "Ugu leaves"
+    ],
+    "Steps": [
+      "Peel and cut yam, boil with peppers and onions.",
+      "Add palm oil, seasoning, and vegetables. Simmer until yam is soft."
+    ]
+  },
+  {
+    "id": 19,
+    "image": ["https://tse4.mm.bing.net/th/id/OIP.sFPKseJlPSGSdQxKG36U3QHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"],
+    "Title": "Suya",
+    "Description": "Spicy grilled meat skewers.",
+    "Ingredients": [
+      "1kg beef or chicken",
+      "2 tablespoons suya spice",
+      "Salt to taste",
+      "Vegetable oil"
+    ],
+    "Steps": [
+      "Cut meat into thin strips, season with suya spice and salt.",
+      "Thread onto skewers, brush with oil, and grill until cooked."
+    ]
+  },
+  {
+    "id": 20,
+    "image": ["https://donpas.co.uk/wp-content/uploads/2022/03/Okpa.jpg"],
+    "Title": "Okpa",
+    "Description": "A steamed pudding made from bambara nut flour, a delicacy from Eastern Nigeria.",
+    "Ingredients": [
+      "2 cups okpa (bambara nut) flour",
+      "1/4 cup palm oil",
+      "2 cups warm water",
+      "1 teaspoon ground pepper",
+      "2 seasoning cubes",
+      "Salt to taste"
+    ],
+    "Steps": [
+      "Mix okpa flour, salt, pepper, and seasoning in a bowl.",
+      "Add palm oil and mix until well combined and yellowish in color.",
+      "Gradually add warm water to form a smooth, thick batter.",
+      "Pour into greased containers or banana leaves, then steam for 45-60 minutes until set."
     ]
   }
 ]

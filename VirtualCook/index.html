@@ -12,41 +12,12 @@
     />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid px-4">
-          <a class="navbar-brand" href="#">
-            <h5 class="fs-3 mb-0">Virtual<span class="fs-3">Cook</span></h5>
-          </a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#feedback">Feedback</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div class="site-title">9JAPOT</div>
+    <div class="top-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="contact.html">Contact</a>
+      <a href="support.html">Support</a>
+    </div>
 
     <main class="main-container">
       <div class="">
@@ -71,6 +42,7 @@
 
       <!-- Recipes container -->
       <div class="container mt-5" id="recipesContainer"></div>
+
     </main>
 
     <script src="js/bootstrap.js"></script>
@@ -119,7 +91,7 @@
             recipeCard.className = "card mb-3 p-3 shadow-sm";
             recipeCard.innerHTML = `
               <img src="${
-                recipe.ImageURL || "img/placeholder.png"
+                (recipe.image && recipe.image[0]) || "img/placeholder.png"
               }" class="card-img-top" alt="${recipe.Title}">
               <h4 class="fw-bold mt-2">${recipe.Title}</h4>
               <p>${recipe.Description}</p>
@@ -155,5 +127,10 @@
         }
       });
     </script>
+    <footer>
+      <div class="container">
+        <p class="text-center">&copy; 2025 9JAPOT by SAGE All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>

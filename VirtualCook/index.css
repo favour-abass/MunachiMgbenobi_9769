@@ -1,3 +1,63 @@
+.main-pushed {
+  margin-top: 200px;
+}
+.site-title {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-orange);
+  letter-spacing: 2px;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+.top-links {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.top-links a {
+  color: var(--primary-orange) !important;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.top-links a:last-child {
+  margin-right: 0;
+}
+.top-links a:hover, .top-links a.active {
+  color: var(--primary-yellow) !important;
+  background: var(--light-orange);
+  text-decoration: underline;
+}
+.top-links {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 1000;
+}
+.top-links a {
+  color: var(--primary-orange) !important;
+  margin-right: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.top-links a:last-child {
+  margin-right: 0;
+}
+.top-links a:hover, .top-links a.active {
+  color: var(--primary-yellow) !important;
+  text-decoration: underline;
+}
 * {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -18,7 +78,6 @@ body {
 
 .navbar {
   background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 107, 53, 0.1);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   padding: 0 0;
