@@ -3,76 +3,285 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VirtualCook</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+    <title>9JAPOT - Recipe Search</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css" />\
   </head>
   <body>
-    <div class="site-title">9JAPOT</div>
-    <div class="top-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="support.html">Support</a>
-    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">9JAPOT</a>
 
-    <main class="main-container">
-      <div class="">
-        <img src="img/searchbar-image.png" alt="" class="" />
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">about</a>
+          </li>
+        </ul>
+
+        <div class="nav-toggle" id="navToggle">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </div>
       </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+      <div class="hero-section">
+        <h1 class="hero-title">Welcome to 9JAPOT</h1>
+        <p class="hero-subtitle">
+          Discover authentic Nigerian recipes and cook delicious meals at home
+        </p>
+
+        <img
+          id="searchImage"
+          src="img/searchbar-image.png"
+          alt="Nigerian cooking ingredients"
+        />
+      </div>
+
       <div class="search-container" id="searchContainer">
         <div class="search-wrapper" id="searchWrapper">
           <div class="input-group">
             <input
               id="searchInput"
               type="text"
-              class="form-control search-input"
+              class="search-input"
               placeholder="What would you like to cook today?"
               aria-label="Search recipes"
             />
-            <button class="btn search-btn" id="searchBtn" type="button">
-              🔍
-            </button>
+            <button class="search-btn" id="searchBtn" type="button">🔍</button>
           </div>
         </div>
       </div>
 
-      <!-- Recipes container -->
-      <div class="container mt-5" id="recipesContainer"></div>
+      <div style="text-align: center">
+        <button class="back-btn" id="backBtn">← Back to Search</button>
+      </div>
 
+      <!-- Recipes container -->
+      <div id="recipesContainer"></div>
     </main>
 
-    <script src="js/bootstrap.js"></script>
-    <script>
-      let Recipes = [];
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-bottom">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px">
+          <p>
+            &copy; 2025 9JAPOT by SAGE. All rights reserved. | Privacy Policy |
+            Terms of Service
+          </p>
+        </div>
+      </div>
+    </footer>
 
-      // Load recipes from JSON file
+    <script>
+      let Recipes = [
+        // Sample recipes data for demonstration
+        {
+          Title: "Jollof Rice",
+          Description:
+            "A delicious West African rice dish cooked with tomatoes and spices, perfect for any occasion",
+          image: [
+            "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "2 cups rice",
+            "4 large tomatoes",
+            "1 large onion",
+            "2 bell peppers",
+            "3 cups chicken stock",
+            "Nigerian spices blend",
+            "Palm oil",
+            "Salt to taste",
+          ],
+          Steps: [
+            "Wash and parboil the rice until it's 70% cooked",
+            "Blend tomatoes, onions, and peppers into a smooth paste",
+            "Heat palm oil and fry the tomato paste until it reduces",
+            "Add chicken stock and spices, then add the parboiled rice",
+            "Cover and cook on low heat until rice is tender and liquid is absorbed",
+            "Stir gently and serve hot",
+          ],
+        },
+        {
+          Title: "Egusi Soup",
+          Description:
+            "Traditional Nigerian soup made with ground melon seeds and leafy vegetables",
+          image: [
+            "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "2 cups ground melon seeds",
+            "500g spinach leaves",
+            "Palm oil",
+            "Assorted meat",
+            "Stockfish",
+            "Seasoning cubes",
+            "Pepper and salt",
+          ],
+          Steps: [
+            "Cook assorted meat and stockfish with seasoning until tender",
+            "Heat palm oil and add ground melon seeds",
+            "Stir continuously to prevent burning",
+            "Add meat stock gradually while stirring",
+            "Add cooked meat and fish",
+            "Add washed spinach leaves and simmer for 5 minutes",
+            "Season to taste and serve",
+          ],
+        },
+        {
+          Title: "Suya",
+          Description:
+            "Spicy grilled meat skewers popular across West Africa, perfect for barbecue",
+          image: [
+            "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "1kg beef (cut in strips)",
+            "Suya spice blend",
+            "Groundnut oil",
+            "Onions",
+            "Fresh tomatoes",
+            "Cucumber for serving",
+          ],
+          Steps: [
+            "Cut beef into long thin strips",
+            "Coat thoroughly with suya spice blend",
+            "Thread onto skewers",
+            "Brush with groundnut oil",
+            "Grill over charcoal fire, turning frequently",
+            "Serve hot with sliced onions, tomatoes, and cucumber",
+          ],
+        },
+        {
+          Title: "Pounded Yam",
+          Description:
+            "Smooth, stretchy Nigerian staple made from yam, perfect with soups",
+          image: [
+            "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "2kg white yam",
+            "Water for boiling",
+            "Salt (optional)",
+          ],
+          Steps: [
+            "Peel yam and cut into chunks",
+            "Boil in salted water until very soft",
+            "Drain water completely",
+            "Pound with mortar and pestle until smooth",
+            "Add small amounts of warm water if needed",
+            "Serve immediately while hot",
+          ],
+        },
+        {
+          Title: "Plantain Chips",
+          Description:
+            "Crispy fried plantain slices, perfect as a snack or side dish",
+          image: [
+            "https://images.unsplash.com/photo-1558030006-450675393462?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "4 unripe green plantains",
+            "Vegetable oil for frying",
+            "Salt to taste",
+            "Optional: pepper seasoning",
+          ],
+          Steps: [
+            "Peel plantains and slice thinly using a mandoline or sharp knife",
+            "Heat oil to 350°F (175°C)",
+            "Fry plantain slices in small batches until golden brown",
+            "Remove and drain on paper towels",
+            "Season with salt while still hot",
+            "Serve as snack or side dish",
+          ],
+        },
+        {
+          Title: "Pepper Soup",
+          Description:
+            "Spicy Nigerian soup with fish or meat, perfect for cold days",
+          image: [
+            "https://images.unsplash.com/photo-1547592180-85f173990554?w=300&h=200&fit=crop",
+          ],
+          Ingredients: [
+            "1kg catfish or goat meat",
+            "Pepper soup spice blend",
+            "Fresh scent leaves",
+            "Onions",
+            "Fresh pepper",
+            "Salt",
+            "Seasoning cubes",
+          ],
+          Steps: [
+            "Clean and cut fish or meat into portions",
+            "Season with salt and seasoning cubes",
+            "Boil until tender",
+            "Add pepper soup spice blend and fresh pepper",
+            "Simmer for 15 minutes",
+            "Add scent leaves and cook for 2 more minutes",
+            "Serve hot",
+          ],
+        },
+      ];
+
+      // Try to load recipes from JSON file, fallback to sample data
       fetch("recipes.json")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data); // now you can use your recipes array
-          Recipes = data; // store recipes in a variable for later use
+          console.log("Loaded recipes from JSON:", data);
+          Recipes = data;
         })
-        .catch((error) => console.error("Error loading JSON:", error));
+        .catch((error) => {
+          console.log("Using sample recipes data");
+        });
 
       const searchInput = document.getElementById("searchInput");
       const searchWrapper = document.getElementById("searchWrapper");
       const searchContainer = document.getElementById("searchContainer");
+      const searchImage = document.getElementById("searchImage");
       const recipesContainer = document.getElementById("recipesContainer");
+      const backBtn = document.getElementById("backBtn");
+      const navToggle = document.getElementById("navToggle");
+      const navMenu = document.getElementById("navMenu");
 
-      // Add some interactivity
-      searchInput.addEventListener("focus", function () {
-        searchWrapper.style.transform = "translateY(-5px)";
+      // Mobile menu toggle
+      navToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
       });
-      searchInput.addEventListener("blur", function () {
-        searchWrapper.style.transform = "translateY(0)";
+
+      // Close mobile menu when clicking on links
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+        });
       });
 
       function searchRecipes() {
         const query = searchInput.value.toLowerCase().trim();
+
+        if (!query) {
+          recipesContainer.innerHTML = `
+            <div class="no-results fade-in">
+              <div class="alert">
+                Please enter a recipe name or ingredient to search 🍳
+              </div>
+            </div>
+          `;
+          return;
+        }
+
         recipesContainer.innerHTML = ""; // clear old results
 
         // filter results based on title or ingredients
@@ -84,53 +293,86 @@
 
         // Hide the search bar when recipes are displayed
         if (results.length > 0) {
-          searchContainer.style.display = "none"; // hide the search bar
+          searchImage.style.display = "none";
+          backBtn.style.display = "block";
 
-          results.forEach((recipe) => {
+          // Create grid layout
+          const grid = document.createElement("div");
+          grid.className = "recipes-grid";
+
+          results.forEach((recipe, index) => {
             const recipeCard = document.createElement("div");
-            recipeCard.className = "card mb-3 p-3 shadow-sm";
+            recipeCard.className = "recipe-card fade-in";
+            recipeCard.style.animationDelay = `${index * 0.1}s`;
+
             recipeCard.innerHTML = `
               <img src="${
-                (recipe.image && recipe.image[0]) || "img/placeholder.png"
-              }" class="card-img-top" alt="${recipe.Title}">
-              <h4 class="fw-bold mt-2">${recipe.Title}</h4>
-              <p>${recipe.Description}</p>
-              <h6>Ingredients:</h6>
-              <ul>
-                ${recipe.Ingredients.map((i) => `<li>${i}</li>`).join("")}
-              </ul>
-              <h6>Steps:</h6>
-              <ol>
-                ${recipe.Steps.map((s) => `<li>${s}</li>`).join("")}
-              </ol>
-          `;
-            recipesContainer.appendChild(recipeCard);
-          });
-        } else {
-          // searchContainer.style.display = "block";
-          // alert(`No recipes found for "${query}"`);
-          recipesContainer.innerHTML = `
-          <div class="alert alert-warning" role="alert">
-              No recipes found for "<strong>${query}</strong>"
-            </div>
+                (recipe.image && recipe.image[0]) ||
+                "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&h=200&fit=crop"
+              }" alt="${recipe.Title}">
+              <div class="card-body">
+                <h3 class="card-title">${recipe.Title}</h3>
+                <p class="card-description">${recipe.Description}</p>
+                
+                <div class="ingredients-section">
+                  <h4 class="ingredients-title">Ingredients:</h4>
+                  <ul class="ingredients-list">
+                    ${recipe.Ingredients.map((i) => `<li>${i}</li>`).join("")}
+                  </ul>
+                </div>
+                
+                <div class="steps-section">
+                  <h4 class="steps-title">Cooking Steps:</h4>
+                  <ol class="steps-list">
+                    ${recipe.Steps.map((s) => `<li>${s}</li>`).join("")}
+                  </ol>
+                </div>
+              </div>
             `;
+            grid.appendChild(recipeCard);
+          });
+
+          recipesContainer.appendChild(grid);
+        } else {
+          searchContainer.style.display = "flex";
+          searchImage.style.display = "block";
+          backBtn.style.display = "none";
+
+          recipesContainer.innerHTML = `
+            <div class="no-results fade-in">
+              <div class="alert">
+                No recipes found for "<strong>${query}</strong>". Try searching for something else! 😊
+              </div>
+            </div>
+          `;
         }
+      }
+
+      function showSearch() {
+        searchImage.style.display = "block";
+        backBtn.style.display = "none";
+        recipesContainer.innerHTML = "";
+        searchInput.value = "";
+        searchInput.focus();
       }
 
       // Hook up events
       document
         .getElementById("searchBtn")
         .addEventListener("click", searchRecipes);
+
       searchInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") {
           searchRecipes();
         }
       });
+
+      backBtn.addEventListener("click", showSearch);
+
+      // Auto-focus search input on load
+      window.addEventListener("load", function () {
+        searchInput.focus();
+      });
     </script>
-    <footer>
-      <div class="container">
-        <p class="text-center">&copy; 2025 9JAPOT by SAGE All rights reserved.</p>
-      </div>
-    </footer>
   </body>
 </html>
